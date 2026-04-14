@@ -18,8 +18,10 @@ public class BankAccount {
     }
 
     private void setBalance(double balance) {
-        if (balance > 0 ) {
-            this.balance = balance;
+        if (balance < 0 ) {
+            throw new IllegalArgumentException("Balance cannot be negative");
+
         }
+        this.balance = balance;
     }
 }

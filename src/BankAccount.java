@@ -9,11 +9,10 @@ public class BankAccount {
         setBalance(balance + amount);
     }
 
-    public void withdraw(double amount){
+    public void withdraw(double amount) throws InsufficientFundsException{
         if (amount > balance) {
-            throw new IllegalArgumentException
+            throw new InsufficientFundsException
                     ("Amount cannot be higher than balance");
-
         }
            setBalance(balance - amount);
 

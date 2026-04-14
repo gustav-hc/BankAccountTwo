@@ -6,5 +6,13 @@ public class Main {
         } catch (IllegalArgumentException e) {
             System.out.println("Fejl: " + e.getMessage());
         }
+
+        BankAccount account1 = new BankAccount(1000);
+
+        try {
+            account1.withdraw(2000);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Fejl: " + e.getMessage());
+        }
     }
 }
